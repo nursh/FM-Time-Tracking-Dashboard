@@ -51,6 +51,8 @@ body {
 }
 
 h1,
+h2,
+h3,
 p {
   margin: 0;
   padding: 0;
@@ -76,6 +78,11 @@ ul {
 
 .flex {
   display: flex;
+}
+
+.center-flex {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .report-title img {
@@ -124,4 +131,49 @@ ul {
 .report-author {
   flex-direction: column;
   gap: var(--spg-100);
+}
+
+/* Report Details */
+.report-detail {
+  background-color: var(--bg-clr, var(--clr-orange));
+  border-radius: var(--border-radius);
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  background-image: var(--bg-img, url('./images/icon-work.svg'));
+  background-position: top -0.7rem right 1rem;
+  background-repeat: no-repeat;
+  padding-top: 2.4rem;
+  margin-top: 2rem;
+}
+
+.report-detail > div {
+  background-color: var(--clr-navy-900);
+  padding: var(--spg-300);
+  border-radius: var(--border-radius);
+}
+
+.report-title h2 {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: var(--txt-5);
+}
+
+.report-time h3 {
+  font-weight: 200;
+  font-size: var(--txt-3);
+}
+
+.report-time p {
+  font-size: var(--txt-6);
+  color: var(--clr-navy-200);
+}
+
+.report-detail.play {
+  --bg-img: url('./images/icon-play.svg');
+  --bg-clr: var(--clr-blue);
+}
+
+.report-detail.study {
+  --bg-img: url('./images/icon-study.svg');
+  --bg-clr: var(--clr-pink);
 }
