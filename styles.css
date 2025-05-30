@@ -80,11 +80,6 @@ ul {
   display: flex;
 }
 
-.center-flex {
-  justify-content: space-between;
-  align-items: center;
-}
-
 .report-title img {
   align-self: center;
 }
@@ -92,13 +87,17 @@ ul {
 .report-heading {
   background-color: var(--clr-navy-900);
   border-radius: var(--border-radius);
-  min-width: 20rem;
+  /* min-width: 20rem; */
   margin-inline: auto;
 }
 
 .report-duration {
   padding-block: var(--spg-300);
   padding-inline: var(--spg-400);
+}
+
+.report-duration a:not(.active) {
+  color: var(--clr-purple-500);
 }
 
 .report-profile {
@@ -150,6 +149,12 @@ ul {
   background-color: var(--clr-navy-900);
   padding: var(--spg-300);
   border-radius: var(--border-radius);
+}
+
+.report-title,
+.report-time {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .report-title h2 {
