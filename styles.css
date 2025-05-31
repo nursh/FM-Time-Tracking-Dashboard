@@ -35,7 +35,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box  ;
+  box-sizing: border-box;
 }
 
 body {
@@ -48,6 +48,10 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+}
+
+main > * + * {
+  margin-block-start: var(--spg-300);
 }
 
 h1,
@@ -133,6 +137,11 @@ ul {
 }
 
 /* Report Details */
+.report-details {
+  display: grid;
+  gap: var(--spg-300);
+}
+
 .report-detail {
   background-color: var(--bg-clr, var(--clr-orange));
   border-radius: var(--border-radius);
@@ -142,7 +151,6 @@ ul {
   background-position: top -0.7rem right 1rem;
   background-repeat: no-repeat;
   padding-top: 2.4rem;
-  margin-top: 2rem;
 }
 
 .report-detail > div {
@@ -171,6 +179,7 @@ ul {
 .report-time p {
   font-size: var(--txt-6);
   color: var(--clr-navy-200);
+  line-height: 1.2;
 }
 
 .report-detail.play {
@@ -181,4 +190,45 @@ ul {
 .report-detail.study {
   --bg-img: url('./images/icon-study.svg');
   --bg-clr: var(--clr-pink);
+}
+
+.report-detail.exercise {
+  --bg-img: url('./images/icon-exercise.svg');
+  --bg-clr: var(--clr-green);
+}
+
+.report-detail.social {
+  --bg-img: url('./images/icon-social.svg');
+  --bg-clr: var(--clr-purple-700);
+}
+
+.report-detail.self-care {
+  --bg-img: url('./images/icon-self-care.svg');
+  --bg-clr: var(--clr-yellow);
+}
+
+
+@media (width > 40rem) {
+  .report-details {
+    grid-template-areas:
+      "detail detail detail"
+      "detail detail detail";
+    grid-template-columns: repeat(3, 11.75rem);
+  }
+
+  article > div > * + * {
+    margin-block-start: var(--spg-200);
+  }
+  
+  .report-time {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spg-100);
+  }
+
+  .report-time h3 {
+    font-size: var(--txt-1);
+    line-height: 1.2;
+    font-weight: 300;
+  }
 }
