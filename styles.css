@@ -52,7 +52,8 @@ body {
 
 main {
   flex-direction: column;
-  gap: var(--spg-200);
+  gap: var(--spg-300);
+  margin-top: 5rem;
 }
 
 h1,
@@ -215,6 +216,11 @@ ul {
 
 
 @media (width > 40rem) {
+  main {
+    gap: var(--spg-300);
+    margin-inline: var(--spg-400);
+  }
+
   .report-details {
     grid-template-columns: repeat(3, minmax(11.75rem, 16rem));
   }
@@ -240,6 +246,10 @@ ul {
 
   main {
     flex-direction: row;
+    gap: var(--spg-400);
+  }
+
+  .report-details {
     gap: var(--spg-400);
   }
 
