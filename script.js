@@ -8,7 +8,7 @@ let currentActiveLink = reportDuration.querySelector(".active");
 let reportData = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./data.json")
+  fetch(uri)
     .then((response) => response.json())
     .then((data) => {
       reportData = data;

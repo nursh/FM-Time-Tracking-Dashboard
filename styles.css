@@ -90,6 +90,8 @@ ul {
 .report-heading {
   background-color: var(--clr-navy-900);
   border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
 }
 
 .report-duration {
@@ -252,6 +254,7 @@ ul {
   .report-profile {
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: 2;
   }
 
   .report-profile h1 {
